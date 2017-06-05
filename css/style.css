@@ -1,0 +1,106 @@
+@font-face {
+    font-family:"PWYummyDonuts";
+    src: url("../font/donut.ttf");
+}
+
+.container {
+  height: 600px;
+  width: 800px;
+}
+
+#spin1, #spin2 {
+  max-height: 20vh;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;  
+}
+
+.mug {
+  background-image: url("../img/mug.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 500px;
+  position: relative;
+}
+
+.coffee {
+background-image: url("../img/coffee.png");
+background-position: top left;
+position: absolute;
+bottom: 68px;
+right: 142px;
+width: 302px;
+height: 48px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+h1, h3, span {
+  font-family: "PWYummyDonuts";
+  color: blue;
+  /*font-size: 100px;*/
+}
+
+#timeLeft {
+  position: absolute;
+  right: 160px;
+  bottom: 180px;
+}
+
+#toggle {
+  color: green;
+  border: 2px dotted black;
+}
+
+#toggle:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#toggle:active {
+  color: red;
+  cursor: pointer;
+}
+
+.drop {
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  position: absolute;
+  animation: drop 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0s infinite;
+}
+
+.drop-outer {
+  position: absolute;
+  right: 250px;
+  bottom: 180px;
+  width: 100px;
+  height: 600px;
+  overflow: hidden;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  backface-visibility: hidden;
+  background-clip: padding-box;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(200px)
+  }
+  75% {
+    transform: translateY(400px)
+  }  
+  100% {
+    transform: translateY(600px)
+  }
+}
